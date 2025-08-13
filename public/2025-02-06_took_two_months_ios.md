@@ -2,7 +2,7 @@
 title: iOS アプリ公開申請審査をしたらログインサービスのデザイン規約にひっかかってリリースまで2ヶ月かかった話
 tags:
   - Xcode
-  - iOS
+  - Flutter
   - Apple
   - Swift
   - AppStoreConnect

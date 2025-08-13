@@ -5,7 +5,7 @@ tags:
   - Docker
   - container
   - Lima
-  - DockerDesktop
+  - Docker
 private: false
 updated_at: '2024-12-29T19:56:21+09:00'
 id: 14b8cd9f8f434002bd55

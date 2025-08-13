@@ -8,7 +8,7 @@ tags:
   - Dart
   - Simulator
   - Flutter
-  - モバイルアプリ
+  - モバイル
 private: false
 updated_at: '2025-07-21T20:35:51+09:00'
 id: 607e51627ba9bf9ff50a
