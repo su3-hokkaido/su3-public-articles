@@ -3,7 +3,7 @@ title: ヤマレコのアプリが落ちたのでバグレポートを読んで�
 tags:
   - Java
   - Android
-  - バグ
+  - 不具合
   - RuntimeError
   - ヤマレコ
 private: false

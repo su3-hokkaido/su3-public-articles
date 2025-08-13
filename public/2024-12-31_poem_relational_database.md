@@ -3,8 +3,9 @@ title: 【ポエム】何でもかんでもリレーショナルデータベー�
 tags:
   - MySQL
   - PostgreSQL
-  - ポエム
   - Database
+  - RDB
+  - ポエム
 private: false
 updated_at: '2024-12-31T19:05:14+09:00'
 id: d4af999089d442e67b67

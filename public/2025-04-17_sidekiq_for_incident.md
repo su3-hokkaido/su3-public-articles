@@ -2,10 +2,10 @@
 title: '障害対応に使える Sidekiq ジョブの調べ方 '
 tags:
   - Redis
-  - sidekiq
+  - Sidekiq
   - ElastiCache
-  - 障害調査
-  - 障害対応
+  - インシデント
+  - 障害
 private: false
 updated_at: '2025-04-17T14:45:14+09:00'
 id: b4b349c24c1ecd1911ec

@@ -4,7 +4,6 @@ tags:
   - Ruby
   - GitHub
   - 自動化
-  - yml
   - GitHubActions
 private: false
 updated_at: '2025-07-28T23:28:34+09:00'
