@@ -10,7 +10,69 @@ This is a repo which I manage my articles written in the markdown format.
 - Zenn: https://zenn.dev/su3_hokkaido
 - note: https://note.com/su3_hokkaido
 
+## How to use Zenn CLI
+
+### Official Guide
+
+https://zenn.dev/zenn/articles/zenn-cli-guide
+
+### Header format
+
+L1-L8 should align with the following format.
+
+```md
+---
+title: "VSCode でのタブキーでの半角スペースの数を変更する" # 記事のタイトル
+emoji: "🎸"
+type: "tech" # tech: 技術記事 / idea: アイデア記事
+topics: ["editor", "setting", "Keyboard", "VSCode"] # タグ。["markdown", "rust", "aws"]のように指定する
+published: true # 公開設定（falseにすると下書き）
+---
+```
+
+### Create new article file
+
+```bash
+npx zenn new:article
+```
+
+### Preview
+
+```bash
+# Default: localhost:8000
+npx zenn preview
+```
+
+```bash
+# Specify a port number
+npx zenn preview --port 3000
+```
+
 ## How to use Qiita CLI
+
+### Official Guide
+
+https://github.com/increments/qiita-cli
+
+### Header format
+
+```md
+---
+title: # Title
+tags: # Up to 5 tags can be written such as follows
+  - Android
+  - Mobile
+  - iOS
+  - Dart
+  - Flutter
+private: false
+updated_at: # Auto generate
+id: # Auto generate
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+```
 
 ### Login
 
@@ -86,7 +148,3 @@ Confirm the following file
 ```bash
 ~/.config/qiita-cli/credentials.json
 ```
-
-### Appendix
-
-Qiita's official repo: https://github.com/increments/qiita-cli
