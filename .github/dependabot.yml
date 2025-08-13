@@ -1,0 +1,32 @@
+# https://docs.github.com/en/code-security/supply-chain-security/configuration-options-for-dependency-updates
+version: 2
+updates:
+  # npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00"
+      timezone: "Asia/Tokyo"
+    assignees:
+      - su3-hokkaido
+    open-pull-requests-limit: 99
+    commit-message:
+      prefix: "npm"
+      include: "scope"
+  
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00"
+      timezone: "Asia/Tokyo"
+    assignees:
+      - su3-hokkaido
+    open-pull-requests-limit: 99
+    commit-message:
+      prefix: "ci"
+      include: "scope"
