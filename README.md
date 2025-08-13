@@ -10,7 +10,38 @@ This is a repo which I manage my articles written in the markdown format.
 - Zenn: https://zenn.dev/su3_hokkaido
 - note: https://note.com/su3_hokkaido
 
+## How to use Zenn CLI
+
+### Official Guide
+
+https://zenn.dev/zenn/articles/zenn-cli-guide
+
+### Create new article file
+
+```bash
+npx zenn new:article
+```
+
+### Preview
+
+```bash
+# Default: localhost:8000
+npx zenn preview
+```
+
+```bash
+# Specify a port number
+npx zenn preview --port 3000
+```
+
+
+
+
 ## How to use Qiita CLI
+
+### Official Guide
+
+https://github.com/increments/qiita-cli
 
 ### Login
 
@@ -86,7 +117,3 @@ Confirm the following file
 ```bash
 ~/.config/qiita-cli/credentials.json
 ```
-
-### Appendix
-
-Qiita's official repo: https://github.com/increments/qiita-cli
