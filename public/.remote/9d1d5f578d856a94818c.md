@@ -1,9 +1,8 @@
 ---
 title: Microsoft Teams で Github の通知を受け取るためのセットアップ手順のメモ
 tags:
-  - GitHub
   - 初心者
-  - Notification
+  - GitHub
   - Teams
   - Microsoft365
 private: false
