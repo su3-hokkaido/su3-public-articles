@@ -2,7 +2,7 @@
 title: "The range of supported deployment target versions is 12.0 to 18.5.99" # 記事のタイトル
 emoji: "📱" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["iOS", "Dart", "Simulator", "Flutter", "モバイルアプリ"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["iOS", "Dart", "Simulator", "Flutter", "モバイル"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
 ---
 # これなに

@@ -1,5 +1,5 @@
 ---
-title: "Github で Production ブランチへのプルリク自動生成ワークフローを作成する" # 記事のタイトル
+title: "Github で 特定のブランチへのプルリク自動生成ワークフローを作成する" # 記事のタイトル
 emoji: "🤖" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["Ruby", "GitHub", "自動化", "yml", "GitHubActions"] # タグ。["markdown", "rust", "aws"]のように指定する

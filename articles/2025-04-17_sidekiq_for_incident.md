@@ -1,5 +1,5 @@
 ---
-title: "障害対応に使える Sidekiq ジョブの調べ方" # 記事のタイトル
+title: "障害対応に使えるかもしれない Sidekiq ジョブの調べ方" # 記事のタイトル
 emoji: "🔍" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["Redis", "sidekiq", "ElastiCache", "障害調査", "障害対応"] # タグ。["markdown", "rust", "aws"]のように指定する

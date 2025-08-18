@@ -1,5 +1,5 @@
 ---
-title: "ローカルから docker コンテナにファイルをコピーするコマンド" # 記事のタイトル
+title: "ローカルから Docker コンテナにファイルをコピーするコマンド" # 記事のタイトル
 emoji: "🐳" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["Docker", "DockerHub", "container", "便利", "オーケストレーション"] # タグ。["markdown", "rust", "aws"]のように指定する

@@ -1,5 +1,5 @@
 ---
-title: "ヤマレコのアプリが落ちたのでバグレポートを読んでみた" # 記事のタイトル
+title: "ヤマレコのアプリが落ちたからバグレポートを読んでみた" # 記事のタイトル
 emoji: "🐞" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["Java", "Android", "バグ", "RuntimeError", "ヤマレコ"] # タグ。["markdown", "rust", "aws"]のように指定する
