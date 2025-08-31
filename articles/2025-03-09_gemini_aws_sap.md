@@ -1,5 +1,5 @@
 ---
-title: "Gemini を利用して AWS Solutions Architect Professional に合格するまで" # 記事のタイトル
+title: "Gemini で AWS Solutions Architect Professional に合格するまで" # 記事のタイトル
 emoji: "☁️" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["AWS", "AWS認定ソリューションアーキテクト", "AWS認定試験", "Gemini", "SAP"] # タグ。["markdown", "rust", "aws"]のように指定する

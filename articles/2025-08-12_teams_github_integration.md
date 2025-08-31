@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Teams で Github の通知を受け取るためのセットアップ手順のメモ" # 記事のタイトル
+title: "Microsoft Teams 経由で Github の通知を受け取るためのセットアップメモ" # 記事のタイトル
 emoji: "📢" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["GitHub", "初心者", "Notification", "Teams", "Microsoft365"] # タグ。["markdown", "rust", "aws"]のように指定する

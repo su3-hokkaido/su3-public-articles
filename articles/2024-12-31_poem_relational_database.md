@@ -1,6 +1,6 @@
 ---
 title: "【ポエム】何でもかんでもリレーショナルデータベースに保存するのはやめよう" # 記事のタイトル
-emoji: "💭" # Choose an appropriate emoji for each article
+emoji: "🧐" # Choose an appropriate emoji for each article
 type: "idea" # tech: 技術記事 / idea: アイデア記事
 topics: ["MySQL", "PostgreSQL", "ポエム", "Database"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）

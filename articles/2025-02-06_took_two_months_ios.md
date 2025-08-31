@@ -1,5 +1,5 @@
 ---
-title: "iOS アプリ公開申請審査をしたらログインサービスのデザイン規約にひっかかってリリースまで2ヶ月かかった話" # 記事のタイトル
+title: "iOSアプリ公開申請審査をしたらログインサービスのデザイン規約にひっかかってリリースまで2ヶ月かかった話" # 記事のタイトル
 emoji: "🍎" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["Xcode", "iOS", "Apple", "Swift", "AppStoreConnect"] # タグ。["markdown", "rust", "aws"]のように指定する

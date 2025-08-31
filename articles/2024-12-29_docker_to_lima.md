@@ -1,5 +1,5 @@
 ---
-title: "Docker Desktop から Lima に乗り換えたときの環境設定手順メモ + golang インストール" # 記事のタイトル
+title: "Docker Desktop から Lima に乗り換えたときの環境設定手順メモ + Golang インストール" # 記事のタイトル
 emoji: "🐳" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["Go", "Docker", "container", "Lima", "DockerDesktop"] # タグ。["markdown", "rust", "aws"]のように指定する
