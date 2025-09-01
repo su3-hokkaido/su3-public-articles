@@ -1,13 +1,13 @@
 ---
 title: Ubuntu 24.04 で postfix を導入する
 tags:
-  - ubuntu
+  - PHP
+  - Ubuntu
   - postfix
   - 初心者
   - Laravel
-  - PHP
 private: false
-updated_at: '2024-11-13T10:28:33+09:00'
+updated_at: '2025-09-01T23:06:48+09:00'
 id: 868d4ff90a139c73b07e
 organization_url_name: null
 slide: false
