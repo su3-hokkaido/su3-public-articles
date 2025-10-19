@@ -7,7 +7,7 @@ tags:
   - Flutter
   - Gemini
 private: false
-updated_at: '2025-10-19T23:53:29+09:00'
+updated_at: '2025-10-19T23:56:24+09:00'
 id: 744074789b5b26e47f22
 organization_url_name: null
 slide: false
