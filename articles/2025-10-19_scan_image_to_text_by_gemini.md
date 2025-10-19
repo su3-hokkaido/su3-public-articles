@@ -181,7 +181,7 @@ final response = await gemini.textAndImage(
 ```dart
 import 'dart:convert';
 import 'package:flutter_gemini/flutter_gemini.dart';
-import 'package:tomarin_flutter/prompts/gemini/flyer_extraction_prompt.dart';
+import 'package:flutter_sample/prompts/gemini/flyer_extraction_prompt.dart';
 
 ...
 
