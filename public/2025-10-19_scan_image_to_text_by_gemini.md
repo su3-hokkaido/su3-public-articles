@@ -7,7 +7,7 @@ tags:
   - Flutter
   - Gemini
 private: false
-updated_at: '2025-10-19T23:56:24+09:00'
+updated_at: '2025-10-20T00:07:36+09:00'
 id: 744074789b5b26e47f22
 organization_url_name: null
 slide: false
@@ -47,7 +47,7 @@ https://pub.dev/packages/google_mlkit_text_recognition
 - Output: $5 / MTok
 - Ref: https://www.claude.com/pricing
 
-![alt text](/images/2025-10-19_claude_api_pricing.png)
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2819748/43626d0b-140b-4599-af70-03e1c63d4c66.png)
 
 ### Gemini
 
@@ -55,7 +55,7 @@ Free, Paid, Enterprise と無料プランが用意されていたので、即決
 
 https://ai.google.dev/gemini-api/docs/pricing
 
-![alt text](/images/2025-10-19_gemini_api_pricing.png)
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2819748/a2cfdc35-93d5-41ec-815b-00734c5bce4d.png)
 
 ### ChatGPT
 
@@ -65,8 +65,7 @@ https://ai.google.dev/gemini-api/docs/pricing
 - $0.400 / 1M tokens
 - Ref: https://openai.com/api/pricing/
 
-![alt text](/images/2025-10-19_chatgpt_api_pricing.png)
-
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2819748/3a0340c3-1488-4db3-bc91-a5beef20dc5a.png)
 
 # Gemini を Flutter に組み込んで画像データからテキスト情報に変換するまでの実装
 
@@ -77,7 +76,7 @@ https://ai.google.dev/gemini-api/docs/pricing
 
 https://aistudio.google.com/app/apikey
 
-![alt text](/images/2025-10-19_gemini_step_01.png)
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2819748/06aff41d-a71c-43aa-bd6c-08c9345e9b44.png)
 
 ## Step 2: プロンプトを準備
 
