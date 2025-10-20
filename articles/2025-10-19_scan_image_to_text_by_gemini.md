@@ -54,7 +54,7 @@ https://ai.google.dev/gemini-api/docs/pricing
 一応 ChatGPT も調べましたが、有料プランのみで Claude 同様に速攻で候補から外しました
 
 - Input: $0.050 / 1M tokens
-- $0.400 / 1M tokens
+- Output: $0.400 / 1M tokens
 - Ref: https://openai.com/api/pricing/
 
 ![alt text](/images/2025-10-19_chatgpt_api_pricing.png)
