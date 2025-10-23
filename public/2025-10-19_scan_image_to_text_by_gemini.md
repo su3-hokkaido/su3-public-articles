@@ -7,7 +7,7 @@ tags:
   - Flutter
   - Gemini
 private: false
-updated_at: '2025-10-20T20:07:31+09:00'
+updated_at: '2025-10-22T13:53:22+09:00'
 id: 744074789b5b26e47f22
 organization_url_name: null
 slide: false
@@ -188,7 +188,7 @@ final response = await gemini.textAndImage(
 ```dart
 import 'dart:convert';
 import 'package:flutter_gemini/flutter_gemini.dart';
-import 'package:tomarin_flutter/prompts/gemini/flyer_extraction_prompt.dart';
+import 'package:flutter_sample/prompts/gemini/flyer_extraction_prompt.dart';
 
 ...
 
