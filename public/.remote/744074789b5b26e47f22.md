@@ -7,7 +7,7 @@ tags:
   - Flutter
   - Gemini
 private: false
-updated_at: '2025-10-22T13:53:22+09:00'
+updated_at: '2025-10-22T14:27:09+09:00'
 id: 744074789b5b26e47f22
 organization_url_name: null
 slide: false
@@ -62,7 +62,7 @@ https://ai.google.dev/gemini-api/docs/pricing
 一応 ChatGPT も調べましたが、有料プランのみで Claude 同様に速攻で候補から外しました
 
 - Input: $0.050 / 1M tokens
-- $0.400 / 1M tokens
+- Output: $0.400 / 1M tokens
 - Ref: https://openai.com/api/pricing/
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2819748/3a0340c3-1488-4db3-bc91-a5beef20dc5a.png)
