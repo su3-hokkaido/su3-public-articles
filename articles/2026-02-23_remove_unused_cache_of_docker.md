@@ -2,7 +2,7 @@
 title: "【週末おそうじ】Dockerのキャッシュを削除してローカルディスクの容量を確保したい"
 emoji: "🐳"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Docker","DockerHub","docker-compose","初心者","メモ"]
+topics: ["Docker","DockerHub","初心者","メモ"]
 published: true
 ---
 # なにこれ
