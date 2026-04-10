@@ -1,10 +1,14 @@
 ---
-title: "Microsoft Teams 経由で Github の通知を受け取るためのセットアップメモ" # 記事のタイトル
+title: "【廃止】Microsoft Teams 経由で Github の通知を受け取るためのセットアップメモ" # 記事のタイトル
 emoji: "📢" # Choose an appropriate emoji for each article
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["GitHub", "初心者", "Notification", "Teams", "Microsoft365"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
 ---
+# ※2026年4月10日追記
+
+本記事はコネクタを使って実装しているのですが、どうやら2026年4月30日をもって廃止となるようなので、代替方法について改めて記事にしました：
+
 # これなに
 
 - ちょっと別の会社でお手伝いをしていたのですが、そこの会社で使っているのが Slack ではなく Teams だった
