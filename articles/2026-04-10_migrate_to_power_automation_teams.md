@@ -7,7 +7,9 @@ published: true
 ---
 # これなに
 
-以前、[Laravel で Microsoft Teams に簡易的なメッセージを通知する手順](https://qiita.com/su3-hokkaido/items/65eb2aba34d2ea99d738)という記事を書きました。
+以前、[Laravel で Microsoft Teams に簡易的なメッセージを通知する手順](https://zenn.dev/su3_hokkaido/articles/2025-11-10_teams_notification_with_laravel)という記事を書きました。
+https://zenn.dev/su3_hokkaido/articles/2025-11-10_teams_notification_with_laravel
+
 先の記事では Office 365 の Incoming Webhook コネクタを使って Teams に通知を飛ばす方法を紹介していたのですが、[Microsoft がこのコネクタを廃止するという発表があったようです。](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/)（知らなかった。。。）
 
 この記事では、廃止の背景と、後継であるPower Automate WorkflowsのWebhookを使ってLaravelからTeamsに通知を送る方法についてまとめます。
