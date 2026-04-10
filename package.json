@@ -3,6 +3,6 @@
     "@qiita/qiita-cli": "^1.8.0"
   },
   "dependencies": {
-    "zenn-cli": "^0.4.6"
+    "zenn-cli": "^0.4.7"
   }
 }
