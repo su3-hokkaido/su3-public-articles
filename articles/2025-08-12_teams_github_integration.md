@@ -8,6 +8,7 @@ published: true # 公開設定（falseにすると下書き）
 # ※2026年4月10日追記
 
 本記事はコネクタを使って実装しているのですが、どうやら2026年4月30日をもって廃止となるようなので、代替方法について改めて記事にしました：
+https://zenn.dev/su3_hokkaido/articles/2026-04-10_migrate_to_power_automation_teams
 
 # これなに
 
