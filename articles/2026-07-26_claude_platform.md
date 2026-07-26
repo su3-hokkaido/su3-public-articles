@@ -1,0 +1,247 @@
+---
+title: "Claude Platform 101 学習メモ — チャットの先にある「Claude で組織を動かす」設計思想"
+emoji: "🏗️"
+type: "tech"
+topics: ["claude", "anthropic", "ai", "claudecode", "mcp"]
+published: false
+---
+
+## これなに
+
+Anthropic Academy より [Claude Platform 101](https://anthropic.skilljar.com/claude-platform-101)」の学習メモです。
+
+このコースの学習目的は「ブラウザで Claude とチャットすること」と「Claude をプロダクトに組み込んで出荷すること」の間にあるギャップを埋めるためのもので、API リクエストの中身、エージェントループ、コンテキストウィンドウ、ツールと権限の仕組みを改めて学び直して知識の体系化を行おうと思ったことです。
+
+## コースの全体構成
+
+1. **What is the Claude Platform?** — API の基本、モデル選択
+2. **Teaching your Agent** — エージェントループ、Tool Use、Thinking
+3. **Extending your Agent** — Built-in Tools、Skills、MCP、Context Management
+4. **Managed Agents** — Anthropic がループを回すホスティッド型エージェント
+5. **Building with Claude Code** — Claude Code 自体を使った開発
+
+## 1. Claude Platform とは
+
+チャット UI での Claude 利用は「質問して、答えが返って、スレッドが終わる」という1回完結の体験。
+
+一方、Platform として Claude を使うとは、構造化されたリクエストを送り、ツールを渡し、実システム上でアクションを起こさせ、そのループを1ユーザーにも100万ユーザーにも回せるようにすること。プロンプティングとは別のスキルセットが要る。
+
+### モデル選択の考え方
+
+コースでは Opus / Sonnet / Haiku の 3 ティアが紹介されているが、2026 年半ば時点ではモデルファミリーがさらに拡充されている。
+
+| ティア | 代表モデル | 位置づけ | トレードオフ |
+|--------|-----------|----------|-------------|
+| Mythos-class | Fable 5 | 最高性能。長期間自律動作、高度なエージェンティックタスク | 最もコスト高（Opus の 2 倍） |
+| Opus | Opus 5 or below | フロンティア級。複雑な推論、長文生成、日常的な高度タスク | コスト高だが Fable の半額 |
+| Sonnet | Sonnet 5 or below | バランス型。多くのユースケースのデフォルト | コストと性能の中間 |
+| Haiku | Haiku 4.5 or below | 高速・低コスト。分類、抽出、ファイル読み取りなど軽いタスク | 推論力は控えめ |
+
+基本方針は変わらず「迷ったら Sonnet、複雑なら Opus、大量処理なら Haiku」。Fable は「数日がかりのコードベース全体マイグレーション」のような長期自律タスクで初めて価格に見合う。ほとんどのユースケースでは Opus 以下で十分。
+
+![alt text](/images/2026-07-26_1_model_family.png)
+
+## 2. Agent の教え方
+
+### エージェントループ
+
+Claude が自律的に動く仕組みの核心。手で書くと以下のサイクルになる。
+
+```
+ユーザーの指示
+  ↓
+Claude が考える（Thinking）
+  ↓
+ツール呼び出しを決定（tool_use ブロック出力）
+  ↓
+Harness がツールを実行し結果を返す
+  ↓
+Claude が結果を観察して次のアクションを決定
+  ↓
+完了するまで繰り返し
+```
+
+このループを自分で書くことで仕組みを理解した上で、SDK の Tool Runner に置き換えると開発が楽になる。
+
+### Tool Use（ツール）
+
+「実行（Doing）」の単位。引数を入れて呼び出すと、必ず 1 つの結果を返す単一の関数。ツール自体には「業務の進め方」の知識はない。
+重要なのは、モデルは「ツールを使いたい」という意思表示（`tool_use` ブロック）を出すだけで、実際の実行は Harness（ランタイム外殻）が行うという分離。
+
+### Thinking（拡張思考）
+
+「推論（Reasoning）」の基盤層。回答を出力する前に、計算、バグチェック、アプローチの検討を Claude が内部で行うためのリソース。
+Skills を読んだ結果を咀嚼するのも Thinking、Tool の呼び出し順を決めるのも Thinking。他の要素すべてに先立つ基盤であり、特定のレイヤーではなく全レイヤーを貫く推論プロセスそのもの。
+
+## 3. Agent の拡張
+
+Agent の能力を広げる4つの仕組みについて。
+
+### Built-in Tools
+
+Harness にプリセットされている標準ツール群。Anthropic のインフラ上で動く。
+
+- **Web Search** — Web 検索
+- **Code Execution** — サンドボックス内でのコード実行
+- **Web Fetch** — URL コンテンツの取得
+
+Claude Code の文脈ではさらにファイル操作（Read, Write, Edit）、検索（Glob, Grep）、実行（Bash）、エージェント委譲（Task）などが加わる。
+
+### Skills
+
+「専門知識・ワークフロー（SOP: Standard Operating Procedures）」の宣言的手順書。
+Skills は「実行可能なパッケージ」ではなく、**Claude が参照する SOP マニュアル**。実行主体は常に Agent（Claude）であり、Skills はその Agent に専門知識を注入するインターフェース。
+「どのツールを、どの順序で、どんな制約の下で使って成果物を出すか」が書かれた知識資産であって、Skills がツールを呼ぶのではなく、Claude が Skills を読んでからツールを呼ぶ。
+
+### Tools vs. Skills vs. MCP の使い分け
+
+![alt text](/images/2026-07-26_2_tools_vs_skills_vs_mcp.png)
+
+この 3 つの違いは**オーナーシップ**で切ると明確になる。
+
+| 要素 | 何のため | 誰が作り、誰がメンテするか |
+|------|----------|--------------------------|
+| Tools | 自社のシステムへの接続 | 自分たちが書き、自分たちが直す |
+| Skills | 自社のプロセスの定義 | 自分たちが書く（接続先不要） |
+| MCP | 他社サービスへの接続 | サービス提供者がメンテする |
+
+> Tools are for your stuff, Skills are for your processes, and MCP is for everyone else's stuff.
+
+たとえば自社 DB への接続コード → Tool。「PR レビューは 3 観点で行う」→ Skill。Cloudflare Workers へのデプロイ → MCP（Cloudflare 公式が提供）。
+
+### Context Management
+
+コンテキストウィンドウという有限リソースの中で「何を覚えていて、何を忘れるか」を制御する仕組み全体。
+
+#### Context の構成要素
+
+![alt text](/images/2026-07-26_3_context_overview.png)
+
+- System prompt
+- Message history（会話履歴）
+- Tool definitions and tool results（ツール定義と実行結果）
+- Attached files and skills（添付ファイルとスキル）
+- Thinking blocks（思考ブロック）
+
+#### Context Management の4つの軸
+
+![alt text](/images/2026-07-26_4_patterns_of_managing_context.png)
+
+**Just-in-time context**
+
+Progressive Disclosure（段階的開示）パターン。必要になるまでコンテキストに入れない。
+
+- CLAUDE.md → セッション開始時に常時ロード
+- Rules（パススコープ付き）→ 該当ファイル操作時のみ
+- Skills → 名前と description だけ先にロード、本文は呼び出し時
+- Subagents → 名前とツールリストだけ、本文は親のコンテキストに入らない
+
+**Compaction**
+
+コンテキストが閾値に達すると自動的に古い会話を要約圧縮する。要素ごとの生存率が異なる。
+
+- CLAUDE.md → Compaction 後に再読み込み（生き残る）
+- Rules（パススコープなし）→ 再注入される
+- Skills（呼び出し済み）→ 共有バジェット内で再注入、古いものから脱落
+- サブディレクトリ CLAUDE.md → 再度触るまで消える
+
+**Prompt caching**
+
+コスト最適化の仕組み。同じプレフィックス部分の API 課金を抑える技術で、コンテキストの中身自体は変えない。
+
+**Memory**
+
+コンテキストウィンドウはセッション終了で消えるが、Memory tool や外部ファイルへの書き出しでセッション間の状態を持ち越す。
+
+## 4. Managed Agents
+
+自分でエージェントループを回す代わりに、Anthropic のインフラ上でサンドボックス化されたエージェントを実行させるモデル。
+「いつ自分でループを回し、いつ Anthropic に任せるか」の判断が必要。イベントストリームを consume しながら、Anthropic がループを回して結果を返してくれる。
+
+## 5. Claude Code で開発する
+
+もはや感覚的にわかっている話ですが、本コースをざっと読んで改めて Claude Code 自体がエージェントであり、それが書くコードをレビューするには「良いコードがどういうものか」を知っている必要があるということを理解。
+
+## Claude Code における全体アーキテクチャ
+
+コースの内容を Claude Code の実務に対応させると、以下のレイヤーモデルになる。
+
+### ランタイムアーキテクチャ（実行時にどう動くか）
+
+| 概念 | 役割 |
+|------|------|
+| **Harness** | LLM を自律エージェントとして動作させるランタイム外殻。ツール実行、権限管理、コンテキスト管理、Hook 発火、承認ループ、Compaction をすべて制御する |
+| **Session** | 1 回の Claude Code 起動〜終了の単位。コンテキストウィンドウのライフサイクルと一致する |
+| **Sandbox** | Bash ツールの実行環境。macOS は Seatbelt、Linux は Landlock でカーネルレベルの隔離を行う |
+| **Orchestration** | 複数のエージェントやツール呼び出しの協調制御。サブエージェント委譲、並列実行、`max_turns` 制限など |
+| **Tools** | Harness がモデルに提供する「手足」。モデルが `tool_use` を出力し、Harness が実行する |
+
+### 設計時アーキテクチャ
+
+| レイヤー | 構成要素 | 役割 |
+|---------|---------|------|
+| 設定・コンテキスト層 | CLAUDE.md, Rules, Output Styles | Agent の前提知識・規約を形成 |
+| 専門知識・ワークフロー層 | Skills `.claude/skills/` | 宣言的な手順書。Agent が参照する SOP |
+| 委譲・並列処理層 | Subagents `.claude/agents/` | 隔離コンテキストで側面タスクを実行 |
+| 接続層 | MCP Servers `.mcp.json` | 外部サービスとの接続プロトコル |
+| ガバナンス層 | Hooks, Permissions, .claudeignore | 決定論的トリガーとアクセス制御 |
+| 操作インターフェース層 | Skills（スラッシュコマンド統合済み） | `/skill-name` で呼び出し可能。|
+
+＊ 旧 Commands は v2.1.3 より Skills に統合されている模様（ソース記事： https://www.buildthisnow.com/blog/tools/hooks/claude-code-commands-to-skills ）
+
+### 何をどこに書くかの判断基準
+
+| やりたいこと | 置き場所 |
+|-------------|---------|
+| 毎回必ず X する（フォーマッター実行など） | Hook |
+| 絶対に X してはいけない（本番 DB 直接操作など） | Hook（exit code 2 でブロック） |
+| X のファイルを触るときは Y を守る | Rule（paths スコープ付き） |
+| X という作業の手順は Y → Z → W | Skill |
+| X の調査は本筋と切り離して実行 | Subagent |
+| プロジェクト全体で常に知っておくべき事実 | `CLAUDE.md`（200 行以下） |
+| 個人の好み | `CLAUDE.local.md` or `~/.claude/CLAUDE.md` |
+| 自社システムへの接続 | Tool（自分でメンテ） |
+| 他社サービスへの接続 | MCP（提供者がメンテ） |
+
+### アンチパターン
+
+- `CLAUDE.md` に「毎回必ず〜する」と書く → Hook にすべき。モデルの判断に依存すると長いセッションで漏れる
+- `CLAUDE.md` に 30 行の手順を書く → Skill にすべき。毎ターンのトークンコストが無駄
+- paths なしの API 専用ルール → パススコープ付き Rule にすべき。無関係なセッションでもロードされる
+- 個人の好みをプロジェクト `CLAUDE.md` に書く → `CLAUDE.local.md` にすべき。チーム全員に影響する
+
+## Claude Platform を構築する目的
+
+総合して考えると「Claude Platform を構築する」目的は大きく以下の3つ。
+
+### 1. 組織の暗黙知を実行可能にする
+
+ベテランの頭の中にしかないやり方を Skills や CLAUDE.md に落とし込み、Claude がその知恵を参照しながら動くようにする。属人性の排除というよりは、属人的な知恵を組織資産として稼働させ続ける仕組みを構築する。
+
+### 2. 判断と作業を分離する
+
+人間がやるべきことは「何をやるか・なぜやるか」の判断。「どうやるか」の実行は Claude に委譲できる部分が増える。人間はレビューと意思決定に集中する。
+
+### 3. ガバナンスを仕組みで担保する
+
+Hooks や Permissions で「やってはいけないこと」をコードとして定義し、ヒューマンエラーやポリシー違反を構造的に防ぐ。個人の注意力に依存しないガバナンス。
+
+## さいごに
+
+Claude Platform 101 は「チャット UI の延長で Claude を使っている人」が「Claude をランタイムとして自分の業務システムを構築する」視点に転換するためのコース。
+特に個人的にあまりよくわからず使っていた以下の内容を知識として整理できたのが良かったかも。
+
+- **Tools / Skills / MCP のオーナーシップによる切り分け** — 「誰が作り、誰がメンテするか」で置き場所が決まる
+- **Context Management は設計判断の根拠** — 「何をどこに書くか」の背後にはすべてコンテキストウィンドウの有限性がある
+- **Harness という概念** — Claude はモデルだけでなく、その周りのハーネス設計が決定的に重要
+
+## 参考リンク
+
+- [Claude Platform 101（Anthropic Academy）](https://anthropic.skilljar.com/claude-platform-101)
+- [Steering Claude Code: when to use CLAUDE.md, skills, hooks, and subagents](https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more)
+- [Claude Code Docs](https://code.claude.com/docs/en/overview)
+- [Hooks Guide](https://code.claude.com/docs/en/hooks-guide)
+- [Skills Docs](https://code.claude.com/docs/en/skills)
+- [Sub-agents Docs](https://code.claude.com/docs/en/sub-agents)
+- [Tools Reference](https://code.claude.com/docs/en/tools-reference)
+- [Compaction（Platform Docs）](https://platform.claude.com/docs/en/build-with-claude/compaction)
