@@ -12,6 +12,8 @@ id: bcdada0c403e3bc2b3e1
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # これなに
 カスタムスキーマを作成した際に `permission denied for schema` というエラーが出たので、その解消方法をメモ。
