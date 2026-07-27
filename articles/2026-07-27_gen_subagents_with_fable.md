@@ -1,5 +1,5 @@
 ---
-title: "Fable のクレジット100ドルが付与されて何しようか迷ったので、いったんサブエージェントを作って「小規模開発チーム」基盤を作った"
+title: " Claude でクレジット100ドルが付与されたので、 Fable を使ってサブエージェントを作って「小規模開発チーム」基盤を作った"
 emoji: "⚖️"
 type: "tech"
 topics: ["ClaudeCode", "Claude", "AI", "Fable", "ハーネスエンジニアリング"]
@@ -18,6 +18,8 @@ Fable が無料開放されていた6月から7月頭くらい、何をやって
 Claude Code のサブエージェント機能を使って、7 つのロール（Product Manager / Project Manager / Solution Architect / Designer / Developer / Quality Assurance / EM Support）を定義し、プロジェクトを開始から完了まで自律的に回せる体制の構築を依頼しました。
 
 自分は基本的には正社員でのお仕事をしつつ、たまに個人開発とか業務委託で、EM や PM、Developer、Scrum Master みたいなことをやることが多いので、どの現場でも使い回せるように、エージェント定義はプロジェクト非依存のテンプレートを作成しようと思ったという背景です。
+
+![alt text](/images/2026-07-27_0_repo_screenshot.png)
 
 ## なぜサブエージェントで「チーム」なのか
 
