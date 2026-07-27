@@ -1,0 +1,153 @@
+<svg width="960" height="820" viewBox="0 0 960 820" xmlns="http://www.w3.org/2000/svg" style="font-family:'Helvetica Neue',Arial,'Hiragino Sans',sans-serif;background:#fff">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Human -->
+  <rect x="350" y="30" width="260" height="56" rx="10" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="1"/>
+  <text x="480" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="500">人間</text>
+  <text x="480" y="73" text-anchor="middle" fill="#B4B2A9" font-size="11">EM / PM / 開発者</text>
+
+  <!-- Branch lines from Human -->
+  <line x1="420" y1="86" x2="420" y2="130" stroke="#888" stroke-width="1"/>
+  <line x1="420" y1="130" x2="160" y2="130" stroke="#888" stroke-width="1"/>
+  <line x1="160" y1="130" x2="160" y2="155" stroke="#888" stroke-width="1" marker-end="url(#arrow-gray)"/>
+
+  <line x1="540" y1="86" x2="540" y2="130" stroke="#888" stroke-width="1"/>
+  <line x1="540" y1="130" x2="600" y2="130" stroke="#888" stroke-width="1"/>
+  <line x1="600" y1="130" x2="600" y2="155" stroke="#888" stroke-width="1" marker-end="url(#arrow-gray)"/>
+
+  <!-- Branch labels -->
+  <text x="270" y="125" text-anchor="middle" fill="#888" font-size="11">相談（プロジェクト外）</text>
+  <text x="700" y="125" text-anchor="middle" fill="#888" font-size="11">/run-project</text>
+
+  <!-- EM Support (standalone) -->
+  <rect x="60" y="158" width="200" height="80" rx="10" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="0.8"/>
+  <text x="160" y="185" text-anchor="middle" fill="#3C3489" font-size="14" font-weight="500">em-support</text>
+  <text x="160" y="203" text-anchor="middle" fill="#534AB7" font-size="11">Opus</text>
+  <text x="160" y="224" text-anchor="middle" fill="#7F77DD" font-size="10">組織計画・育成・評価支援</text>
+
+  <!-- Main Session (Orchestrator) -->
+  <rect x="380" y="158" width="500" height="630" rx="14" fill="#F7F7F5" stroke="#D3D1C7" stroke-width="0.8" stroke-dasharray="6 3"/>
+  <text x="630" y="182" text-anchor="middle" fill="#5F5E5A" font-size="13" font-weight="500">メインセッション（オーケストレーター）</text>
+  <text x="630" y="198" text-anchor="middle" fill="#888780" font-size="10">PjM の計画に従い Task ツールで各ロールを起動</text>
+
+  <!-- Pipeline flow -->
+  <!-- Product Manager -->
+  <rect x="415" y="220" width="200" height="64" rx="8" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.8"/>
+  <text x="515" y="245" text-anchor="middle" fill="#0C447C" font-size="13" font-weight="500">Product Manager</text>
+  <text x="515" y="261" text-anchor="middle" fill="#185FA5" font-size="11">Opus</text>
+  <text x="515" y="277" text-anchor="middle" fill="#378ADD" font-size="10">ビジョン・要求整理・受け入れ基準</text>
+  <!-- output file -->
+  <rect x="650" y="234" width="195" height="28" rx="4" fill="#fff" stroke="#85B7EB" stroke-width="0.5"/>
+  <text x="748" y="252" text-anchor="middle" fill="#185FA5" font-size="10" font-family="'SF Mono','Consolas',monospace">10_product_brief.md</text>
+  <line x1="615" y1="252" x2="648" y2="252" stroke="#85B7EB" stroke-width="0.8" marker-end="url(#arrow)"/>
+
+  <!-- Arrow down -->
+  <line x1="515" y1="284" x2="515" y2="310" stroke="#888" stroke-width="0.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- Project Manager -->
+  <rect x="415" y="314" width="200" height="64" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.8"/>
+  <text x="515" y="339" text-anchor="middle" fill="#085041" font-size="13" font-weight="500">Project Manager</text>
+  <text x="515" y="355" text-anchor="middle" fill="#0F6E56" font-size="11">Opus（頭脳）</text>
+  <text x="515" y="371" text-anchor="middle" fill="#1D9E75" font-size="10">計画・進行・コスト/リスク・完了判定</text>
+  <!-- output files -->
+  <rect x="650" y="322" width="195" height="28" rx="4" fill="#fff" stroke="#5DCAA5" stroke-width="0.5"/>
+  <text x="748" y="340" text-anchor="middle" fill="#0F6E56" font-size="10" font-family="'SF Mono','Consolas',monospace">20_project_plan.md</text>
+  <line x1="615" y1="340" x2="648" y2="340" stroke="#5DCAA5" stroke-width="0.8" marker-end="url(#arrow)"/>
+  <rect x="650" y="356" width="195" height="28" rx="4" fill="#fff" stroke="#5DCAA5" stroke-width="0.5"/>
+  <text x="748" y="374" text-anchor="middle" fill="#0F6E56" font-size="10" font-family="'SF Mono','Consolas',monospace">90_completion.md</text>
+
+  <!-- GATE 1 -->
+  <rect x="398" y="390" width="234" height="22" rx="4" fill="#FAEEDA" stroke="#EF9F27" stroke-width="0.8"/>
+  <text x="515" y="405" text-anchor="middle" fill="#854F0B" font-size="10" font-weight="500">Gate 1: 計画承認（人間）</text>
+
+  <!-- Arrow down -->
+  <line x1="515" y1="412" x2="515" y2="434" stroke="#888" stroke-width="0.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- SA and Designer (parallel) -->
+  <!-- Solution Architect -->
+  <rect x="400" y="438" width="180" height="64" rx="8" fill="#FBEAF0" stroke="#ED93B1" stroke-width="0.8"/>
+  <text x="490" y="462" text-anchor="middle" fill="#72243E" font-size="13" font-weight="500">Solution Architect</text>
+  <text x="490" y="478" text-anchor="middle" fill="#993556" font-size="11">Opus</text>
+  <text x="490" y="494" text-anchor="middle" fill="#D4537E" font-size="10">アーキテクチャ・ADR</text>
+
+  <!-- Designer -->
+  <rect x="600" y="438" width="180" height="64" rx="8" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="0.8"/>
+  <text x="690" y="462" text-anchor="middle" fill="#3C3489" font-size="13" font-weight="500">Designer</text>
+  <text x="690" y="478" text-anchor="middle" fill="#534AB7" font-size="11">Opus</text>
+  <text x="690" y="494" text-anchor="middle" fill="#7F77DD" font-size="10">デザイン基盤・トークン</text>
+
+  <!-- Parallel label -->
+  <text x="825" y="465" fill="#888" font-size="10">30_architecture.md</text>
+  <text x="825" y="485" fill="#888" font-size="10">40_design_brief.md</text>
+
+  <!-- Arrow down -->
+  <line x1="540" y1="502" x2="540" y2="528" stroke="#888" stroke-width="0.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- Developer -->
+  <rect x="415" y="532" width="200" height="64" rx="8" fill="#FAECE7" stroke="#F0997B" stroke-width="0.8"/>
+  <text x="515" y="557" text-anchor="middle" fill="#712B13" font-size="13" font-weight="500">Developer</text>
+  <text x="515" y="573" text-anchor="middle" fill="#993C1D" font-size="11">Sonnet</text>
+  <text x="515" y="589" text-anchor="middle" fill="#D85A30" font-size="10">実装・テスト・品質ゲート実行</text>
+  <!-- output file -->
+  <rect x="650" y="548" width="195" height="28" rx="4" fill="#fff" stroke="#F0997B" stroke-width="0.5"/>
+  <text x="748" y="566" text-anchor="middle" fill="#993C1D" font-size="10" font-family="'SF Mono','Consolas',monospace">50_implementation.md</text>
+  <line x1="615" y1="566" x2="648" y2="566" stroke="#F0997B" stroke-width="0.8" marker-end="url(#arrow)"/>
+
+  <!-- Arrow down -->
+  <line x1="515" y1="596" x2="515" y2="622" stroke="#888" stroke-width="0.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- Quality Assurance -->
+  <rect x="415" y="626" width="200" height="64" rx="8" fill="#EAF3DE" stroke="#97C459" stroke-width="0.8"/>
+  <text x="515" y="651" text-anchor="middle" fill="#27500A" font-size="13" font-weight="500">Quality Assurance</text>
+  <text x="515" y="667" text-anchor="middle" fill="#3B6D11" font-size="11">Sonnet</text>
+  <text x="515" y="683" text-anchor="middle" fill="#639922" font-size="10">独立検証・受け入れ基準チェック</text>
+  <!-- output file -->
+  <rect x="650" y="642" width="195" height="28" rx="4" fill="#fff" stroke="#97C459" stroke-width="0.5"/>
+  <text x="748" y="660" text-anchor="middle" fill="#3B6D11" font-size="10" font-family="'SF Mono','Consolas',monospace">60_qa_report.md</text>
+  <line x1="615" y1="660" x2="648" y2="660" stroke="#97C459" stroke-width="0.8" marker-end="url(#arrow)"/>
+
+  <!-- Rework loop -->
+  <path d="M415 670 L395 670 L395 570 L415 570" fill="none" stroke="#E24B4A" stroke-width="0.8" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="392" y="618" text-anchor="end" fill="#A32D2D" font-size="9">FAIL: 差し戻し</text>
+  <text x="392" y="632" text-anchor="end" fill="#A32D2D" font-size="9">（最大2回）</text>
+
+  <!-- GATE 2 -->
+  <rect x="398" y="704" width="234" height="22" rx="4" fill="#FAEEDA" stroke="#EF9F27" stroke-width="0.8"/>
+  <text x="515" y="719" text-anchor="middle" fill="#854F0B" font-size="10" font-weight="500">Gate 2: 完了承認（人間）</text>
+
+  <!-- Arrow to completion -->
+  <line x1="515" y1="726" x2="515" y2="748" stroke="#888" stroke-width="0.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- Completion -->
+  <rect x="440" y="752" width="150" height="30" rx="6" fill="#2C2C2A" stroke="#2C2C2A" stroke-width="1"/>
+  <text x="515" y="771" text-anchor="middle" fill="#fff" font-size="12" font-weight="500">完了・人間が git push</text>
+
+  <!-- Legend -->
+  <rect x="30" y="290" width="220" height="160" rx="8" fill="#FAFAF8" stroke="#D3D1C7" stroke-width="0.5"/>
+  <text x="140" y="312" text-anchor="middle" fill="#2C2C2A" font-size="12" font-weight="500">凡例</text>
+  <rect x="50" y="326" width="14" height="14" rx="3" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.5"/>
+  <text x="72" y="337" fill="#5F5E5A" font-size="11">Opus（判断・設計系）</text>
+  <rect x="50" y="350" width="14" height="14" rx="3" fill="#FAECE7" stroke="#F0997B" stroke-width="0.5"/>
+  <text x="72" y="361" fill="#5F5E5A" font-size="11">Sonnet（実行系）</text>
+  <rect x="50" y="374" width="14" height="14" rx="3" fill="#FAEEDA" stroke="#EF9F27" stroke-width="0.5"/>
+  <text x="72" y="385" fill="#5F5E5A" font-size="11">人間ゲート</text>
+  <line x1="50" y1="404" x2="64" y2="404" stroke="#E24B4A" stroke-width="0.8" stroke-dasharray="4 3"/>
+  <text x="72" y="408" fill="#5F5E5A" font-size="11">QA 差し戻しループ</text>
+  <rect x="50" y="420" width="50" height="16" rx="3" fill="#fff" stroke="#85B7EB" stroke-width="0.5"/>
+  <text x="72" y="432" fill="#5F5E5A" font-size="9" font-family="'SF Mono','Consolas',monospace">*.md</text>
+  <text x="108" y="432" fill="#5F5E5A" font-size="11">成果物ファイル</text>
+
+  <!-- Annotation: file-based handoff -->
+  <text x="140" y="510" text-anchor="middle" fill="#888780" font-size="10">エージェント間の受け渡しは</text>
+  <text x="140" y="524" text-anchor="middle" fill="#888780" font-size="10">すべてファイルベース</text>
+  <text x="140" y="546" text-anchor="middle" fill="#888780" font-size="10">（コンテキスト分離）</text>
+  <text x="140" y="560" text-anchor="middle" fill="#888780" font-size="10">（再開容易性）</text>
+  <text x="140" y="574" text-anchor="middle" fill="#888780" font-size="10">（監査可能性）</text>
+</svg>
