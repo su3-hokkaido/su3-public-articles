@@ -1,5 +1,5 @@
 ---
-title: "iOS: Transporter で ipa をアップロードして Missing purpose string in Info.plist と怒られた"
+title: "Transporter で ipa をアップロードして Missing purpose string in Info.plist と怒られた"
 emoji: "😺"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["iOS","AppStoreConnect","Transporter","Flutter","Dart"]
