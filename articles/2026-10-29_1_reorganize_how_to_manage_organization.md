@@ -3,7 +3,7 @@ title: "AI Driven な時代だからこそ改めて目標設定と評価をど�
 emoji: "😎"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["AI","組織開発","マネジメント","エンジニアリングマネージャー","チーム開発"]
-published: false
+published: true
 ---
 ## これなに
 
