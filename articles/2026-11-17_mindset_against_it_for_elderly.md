@@ -129,6 +129,6 @@ AIは自然言語（人間が使うような自然な言葉）でそれらしい
 - [IPA 情報セキュリティ10大脅威 2026](https://www.ipa.go.jp/security/10threats/10threats2026.html)
 - [総務省 令和6年版情報通信白書：偽・誤情報（ディープフェイク）](https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html)
 - [総務省 国民のための情報セキュリティサイト：ネットストーカー](https://www.soumu.go.jp/main_sosiki/cybersecurity/kokumin/case/end_user/02/)
-- [埼玉県警 SNSを通じた犯罪被害の現状](https://www.police.pref.saitama.lg.jp/documents/663/snsgenjyou.pdf)
-- [大分県警 SNSでの犯罪被害に気をつけよう](https://www.pref.oita.jp/uploaded/attachment/2271941.pdf)
+- [埼玉県警 SNSを通じた犯罪被害の現状](https://www.police.pref.saitama.lg.jp/c0070/kurashi/sns-higai.html)
+- [大分県警 SNSでの犯罪被害に気をつけよう](https://www.pref.oita.jp/site/keisatu/jigadori.html)
 - [JAPET 位置情報とディープフェイク](https://www.japet.or.jp/net-walk/booklet/file/2023/PictureBook_forGIGA2023_P22_23.pdf)
