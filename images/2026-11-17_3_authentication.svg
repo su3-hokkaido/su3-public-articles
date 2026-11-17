@@ -1,0 +1,46 @@
+<svg width="960" height="450" viewBox="0 0 960 450" xmlns="http://www.w3.org/2000/svg" style="font-family:'Helvetica Neue',Arial,'Hiragino Sans',sans-serif;background:#fff">
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#A32D2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="960" height="450" fill="#fff"/>
+
+  <!-- left: no lock -->
+  <rect x="40" y="30" width="400" height="340" rx="14" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
+  <text x="240" y="62" text-anchor="middle" fill="#791F1F" font-size="18" font-weight="500">認証をぜんぶ無しにすると</text>
+
+  <rect x="90" y="95" width="300" height="46" rx="10" fill="#fff" stroke="#A32D2D" stroke-width="1"/>
+  <text x="240" y="124" text-anchor="middle" fill="#791F1F" font-size="14">悪意のある第三者</text>
+
+  <line x1="240" y1="141" x2="240" y2="187" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <text x="256" y="169" fill="#A32D2D" font-size="12">そのまま入れてしまう</text>
+
+  <rect x="90" y="190" width="300" height="60" rx="10" fill="#fff" stroke="#A32D2D" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="240" y="216" text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">LINE・Facebook・銀行アプリ</text>
+  <text x="240" y="238" text-anchor="middle" fill="#A32D2D" font-size="12">ロック無し</text>
+
+  <line x1="240" y1="250" x2="240" y2="294" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <rect x="90" y="297" width="300" height="58" rx="10" fill="#A32D2D"/>
+  <text x="240" y="322" text-anchor="middle" fill="#fff" font-size="15" font-weight="500">アカウントの乗っ取り</text>
+  <text x="240" y="342" text-anchor="middle" fill="#F7C1C1" font-size="12">友達・親戚にも被害が広がる</text>
+
+  <!-- right: layers -->
+  <rect x="520" y="30" width="400" height="340" rx="14" fill="#EAF3DE" stroke="#3B6D11" stroke-width="1"/>
+  <text x="720" y="62" text-anchor="middle" fill="#27500A" font-size="18" font-weight="500">認証を重ねると</text>
+
+  <rect x="545" y="85" width="350" height="270" rx="12" fill="#fff" stroke="#639922" stroke-width="1.5"/>
+  <text x="720" y="110" text-anchor="middle" fill="#27500A" font-size="13" font-weight="500">2段階認証（追加の確認）</text>
+  <rect x="575" y="125" width="290" height="205" rx="10" fill="#F4F9EC" stroke="#639922" stroke-width="1.5"/>
+  <text x="720" y="150" text-anchor="middle" fill="#27500A" font-size="13" font-weight="500">パスワード</text>
+  <rect x="605" y="163" width="230" height="135" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="1.5"/>
+  <text x="720" y="188" text-anchor="middle" fill="#27500A" font-size="13" font-weight="500">パスコード（端末のロック）</text>
+  <rect x="645" y="212" width="150" height="62" rx="8" fill="#27500A"/>
+  <text x="720" y="238" text-anchor="middle" fill="#fff" font-size="13" font-weight="500">大事な</text>
+  <text x="720" y="258" text-anchor="middle" fill="#fff" font-size="13" font-weight="500">アカウント</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="392" width="880" height="40" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="480" y="417" text-anchor="middle" fill="#2C2C2A" font-size="14">乗っ取りの主な原因：弱い認証 ／ パスワードの使い回し ／ フィッシング</text>
+</svg>

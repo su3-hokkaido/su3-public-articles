@@ -1,0 +1,49 @@
+<svg width="960" height="480" viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg" style="font-family:'Helvetica Neue',Arial,'Hiragino Sans',sans-serif;background:#fff">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#fff"/>
+
+  <!-- source -->
+  <rect x="30" y="190" width="150" height="90" rx="10" fill="#2C2C2A"/>
+  <text x="105" y="228" text-anchor="middle" fill="#fff" font-size="15" font-weight="500">投稿する</text>
+  <text x="105" y="252" text-anchor="middle" fill="#B4B2A9" font-size="13">写真・動画</text>
+
+  <path d="M180 235 H200 V75 H218" fill="none" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="180" y1="235" x2="218" y2="235" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M200 235 V395 H218" fill="none" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- row A -->
+  <rect x="220" y="40" width="220" height="70" rx="10" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="330" y="81" text-anchor="middle" fill="#2C2C2A" font-size="13">背景・看板・瞳に映った景色</text>
+  <line x1="440" y1="75" x2="478" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="480" y="40" width="200" height="70" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="580" y="81" text-anchor="middle" fill="#633806" font-size="14">場所を特定される</text>
+  <line x1="680" y1="75" x2="718" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="720" y="40" width="210" height="70" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
+  <text x="825" y="81" text-anchor="middle" fill="#791F1F" font-size="15" font-weight="500">ストーカー被害</text>
+
+  <!-- row B -->
+  <rect x="220" y="200" width="220" height="70" rx="10" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="330" y="241" text-anchor="middle" fill="#2C2C2A" font-size="13">人物が特定できる顔・姿</text>
+  <line x1="440" y1="235" x2="478" y2="235" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="480" y="200" width="200" height="70" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="580" y="241" text-anchor="middle" fill="#633806" font-size="13">偽の写真・動画の素材に</text>
+  <line x1="680" y1="235" x2="718" y2="235" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="720" y="200" width="210" height="70" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
+  <text x="825" y="241" text-anchor="middle" fill="#791F1F" font-size="15" font-weight="500">ディープフェイク</text>
+
+  <!-- row C -->
+  <rect x="220" y="360" width="220" height="70" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="330" y="401" text-anchor="middle" fill="#0C447C" font-size="13">友達だけに公開しても…</text>
+  <line x1="440" y1="395" x2="478" y2="395" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="480" y="360" width="200" height="70" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="580" y="401" text-anchor="middle" fill="#633806" font-size="13">乗っ取り・保存・拡散</text>
+  <line x1="680" y1="395" x2="718" y2="395" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="720" y="360" width="210" height="70" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1"/>
+  <text x="825" y="401" text-anchor="middle" fill="#791F1F" font-size="14" font-weight="500">一度アップすると消せない</text>
+
+  <text x="480" y="462" text-anchor="middle" fill="#27500A" font-size="13">人物・場所が分かる写真は控える ／ 公開範囲を絞っても過信しない</text>
+</svg>

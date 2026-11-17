@@ -1,0 +1,41 @@
+<svg width="960" height="440" viewBox="0 0 960 440" xmlns="http://www.w3.org/2000/svg" style="font-family:'Helvetica Neue',Arial,'Hiragino Sans',sans-serif;background:#fff">
+  <rect width="960" height="440" fill="#fff"/>
+
+  <!-- banner -->
+  <rect x="60" y="25" width="840" height="86" rx="14" fill="#2C2C2A"/>
+  <text x="480" y="55" text-anchor="middle" fill="#B4B2A9" font-size="13">心構え</text>
+  <text x="480" y="90" text-anchor="middle" fill="#fff" font-size="18" font-weight="500">真実の情報も嘘の情報も世界中に流れているつもりで守りに力を入れよう</text>
+
+  <!-- connectors -->
+  <line x1="190" y1="111" x2="190" y2="160" stroke="#888" stroke-width="1.5"/>
+  <line x1="480" y1="111" x2="480" y2="160" stroke="#888" stroke-width="1.5"/>
+  <line x1="770" y1="111" x2="770" y2="160" stroke="#888" stroke-width="1.5"/>
+
+  <!-- pillar 1 -->
+  <rect x="60" y="160" width="260" height="180" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="190" y="195" text-anchor="middle" fill="#0C447C" font-size="16" font-weight="500">判断できる目を養う</text>
+  <text x="190" y="228" text-anchor="middle" fill="#185FA5" font-size="13">インターネットやAIには</text>
+  <text x="190" y="248" text-anchor="middle" fill="#185FA5" font-size="13">真実も嘘もある</text>
+  <rect x="100" y="285" width="180" height="32" rx="16" fill="#fff" stroke="#85B7EB" stroke-width="1"/>
+  <text x="190" y="306" text-anchor="middle" fill="#0C447C" font-size="12">「AIが全部教えてくれる」</text>
+
+  <!-- pillar 2 -->
+  <rect x="350" y="160" width="260" height="180" rx="12" fill="#EAF3DE" stroke="#3B6D11" stroke-width="1"/>
+  <text x="480" y="195" text-anchor="middle" fill="#27500A" font-size="16" font-weight="500">使える設定は全部有効に</text>
+  <text x="480" y="228" text-anchor="middle" fill="#3B6D11" font-size="13">パスワード・2段階認証など</text>
+  <text x="480" y="248" text-anchor="middle" fill="#3B6D11" font-size="13">不正アクセスに備える</text>
+  <rect x="390" y="285" width="180" height="32" rx="16" fill="#fff" stroke="#97C459" stroke-width="1"/>
+  <text x="480" y="306" text-anchor="middle" fill="#27500A" font-size="12">「ロック無しにしている」</text>
+
+  <!-- pillar 3 -->
+  <rect x="640" y="160" width="260" height="180" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="770" y="195" text-anchor="middle" fill="#633806" font-size="16" font-weight="500">情報は漏れると思って行動</text>
+  <text x="770" y="228" text-anchor="middle" fill="#854F0B" font-size="13">個人情報・写真は</text>
+  <text x="770" y="248" text-anchor="middle" fill="#854F0B" font-size="13">出す前に一度立ち止まる</text>
+  <rect x="680" y="285" width="180" height="32" rx="16" fill="#fff" stroke="#EF9F27" stroke-width="1"/>
+  <text x="770" y="306" text-anchor="middle" fill="#633806" font-size="12">個人情報・写真の公開</text>
+
+  <!-- base -->
+  <rect x="60" y="360" width="840" height="46" rx="10" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="480" y="389" text-anchor="middle" fill="#2C2C2A" font-size="14">実例から分かる3つの教訓 ＝ 「守り」に力を入れる</text>
+</svg>
