@@ -1,0 +1,40 @@
+<svg width="960" height="400" viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" style="font-family:'Helvetica Neue',Arial,'Hiragino Sans',sans-serif;background:#fff">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="960" height="400" fill="#fff"/>
+
+  <!-- tools -->
+  <text x="480" y="28" text-anchor="middle" fill="#888" font-size="13">触れる機会のあるものが、一昔前よりずっと増えた</text>
+  <rect x="90" y="42" width="180" height="40" rx="20" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="180" y="67" text-anchor="middle" fill="#2C2C2A" font-size="15">インターネット</text>
+  <rect x="290" y="42" width="180" height="40" rx="20" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="380" y="67" text-anchor="middle" fill="#2C2C2A" font-size="15">パソコン</text>
+  <rect x="490" y="42" width="180" height="40" rx="20" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="580" y="67" text-anchor="middle" fill="#2C2C2A" font-size="15">スマートフォン</text>
+  <rect x="690" y="42" width="180" height="40" rx="20" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="780" y="67" text-anchor="middle" fill="#2C2C2A" font-size="15">アプリ</text>
+
+  <!-- two groups -->
+  <rect x="40" y="115" width="380" height="110" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="230" y="153" text-anchor="middle" fill="#0C447C" font-size="18" font-weight="500">エンジニア・よく使う人</text>
+  <text x="230" y="185" text-anchor="middle" fill="#185FA5" font-size="14">知識や考え方がそれなりに身についている</text>
+
+  <rect x="540" y="115" width="380" height="110" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="730" y="153" text-anchor="middle" fill="#633806" font-size="18" font-weight="500">年配の方など</text>
+  <text x="730" y="185" text-anchor="middle" fill="#854F0B" font-size="14">触れる機会はあるが、学ぶ機会が少ない</text>
+
+  <line x1="428" y1="170" x2="532" y2="170" stroke="#888" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="480" y="156" text-anchor="middle" fill="#A32D2D" font-size="15" font-weight="500">情報格差</text>
+
+  <!-- arrow down -->
+  <line x1="480" y1="195" x2="480" y2="282" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="496" y="244" fill="#888" font-size="13">話していて感じたこと</text>
+
+  <!-- this article -->
+  <rect x="60" y="290" width="840" height="90" rx="12" fill="#2C2C2A"/>
+  <text x="480" y="325" text-anchor="middle" fill="#fff" font-size="17" font-weight="500">「これは結構危ないな…」と思った実例 4つ</text>
+  <text x="480" y="355" text-anchor="middle" fill="#B4B2A9" font-size="14">そこから導いた「どんな心構えでいるべきか」</text>
+</svg>
