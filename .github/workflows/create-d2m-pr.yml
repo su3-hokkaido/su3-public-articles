@@ -18,10 +18,10 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - name: Set up Ruby 3.3.1
+      - name: Set up Ruby 3.3.13
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3.1
+          ruby-version: 3.3.13
       - name: Execute gir-pr-develop (develop -> main)
         env:
           GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
