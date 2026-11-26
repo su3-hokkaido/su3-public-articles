@@ -181,7 +181,8 @@ OrbStack と Docker Desktop は役割が重なります。両方入れる場合�
 ## ~/.ssh/config
 
 仕事用と個人用で GitHub アカウントを使い分ける設定をする。詳しくはこちら。
-[https://zenn.dev/su3_hokkaido/articles/2026-01-18_set_remote_url_of_github_host](https://zenn.dev/su3_hokkaido/articles/2026-01-18_set_remote_url_of_github_host)
+
+https://zenn.dev/su3_hokkaido/articles/2026-01-18_set_remote_url_of_github_host
 
 ## ~/.zshrc
 
