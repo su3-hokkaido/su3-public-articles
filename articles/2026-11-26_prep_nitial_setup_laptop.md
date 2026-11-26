@@ -47,7 +47,7 @@ pbcopy < ~/.ssh/[任意の名前].pub
 
 コマンドは自分用のメモにも残しています。
 
-[https://qiita.com/su3-hokkaido/items/05e9fb6b766bfefcc4f3](https://qiita.com/su3-hokkaido/items/05e9fb6b766bfefcc4f3)
+https://zenn.dev/su3_hokkaido/articles/2024-11-04_gen_ssh_key
 
 # AI
 
